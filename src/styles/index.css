@@ -1,12 +1,107 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+    .todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    min-height: 300px;
+    max-height: 300px;
+    width: 500px;
+    max-width: 500px;
+  }
+  
+  .todo-item {
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .todo-title {
+    flex-grow: 1;
+  }
+  
+  .add-buton{
+    background-color: #3ee015;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
 
-/* 
+  .delete-btn {
+    background-color: #ff6961;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: auto;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .delete-btn:hover {
+    opacity: 1;
+  }
+  
+  .todo-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .todo-list::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  .todo-list::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+  
+  .todo-list::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+  }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+  .todo-list:empty::before {
+    content: "No tasks, add a task";
+    color: #ccc;
+    font-style: italic;
+  }
 
-*/
+  .title {
+    text-align: center;
+    opacity: 0.4;
+    margin-bottom: 20px;
+  }
+
+  .no-tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .add-todo-input{
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 4px;
+    margin-right: 10px;
+  }
